@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 2.0">
+<title>Test Form Example</title>
+</head>
+
+<body>
+
+<h1>Test form</h1>
+
+<hr>
+
+<p>FORM METHOD=&quot;POST&quot; action=/cgi-bin/testcgi.pl</p>
+
+<form action="/cgi-bin/testcgi.pl" method="POST">
+    <input type="hidden" name="recipient" value="test@test.com"><input
+    type="hidden" name="subject" value="Form submission"><p>Two
+    hidden fields: recipient, and subject</p>
+    <p>Please input your name: <input type="text" size="30"
+    name="name"><br>
+    and your email address: <input type="text" size="30"
+    name="addr"></p>
+    <p>This is a field called ARGV[0]: <input type="text"
+    size="30" name="ARGV[0]"><br>
+    This is a field called ARGV[1]: <input type="text" size="30"
+    name="ARGV[1]"></p>
+    <p><input type="submit"> <input type="reset"> </p>
+</form>
+
+<hr>
+<hr>
+
+<p>FORM METHOD=&quot;GET&quot; action=/cgi-bin/testcgi.pl</p>
+
+<form action="/cgi-bin/testcgi.pl" method="GET">
+    <input type="hidden" name="recipient" value="test@test.com"><input
+    type="hidden" name="subject" value="Form submission"><p>Two
+    hidden fields: recipient, and subject</p>
+    <p>Please input your name: <input type="text" size="30"
+    name="name"><br>
+    and your email address: <input type="text" size="30"
+    name="addr"></p>
+    <p>This is a field called ARGV[0]: <input type="text"
+    size="30" name="ARGV[0]"><br>
+    This is a field called ARGV[1]: <input type="text" size="30"
+    name="ARGV[1]"></p>
+    <p><input type="submit"> <input type="reset"> </p>
+</form>
+
+
+<p>FORM METHOD=&quot;GET&quot; action=/cgi-bin/testcgi.exe</p>
+
+<form action="/cgi-bin//testcgi.exe" method="GET">
+    <input type="hidden" name="recipient" value="test@test.com"><input
+    type="hidden" name="subject" value="Form submission"><p>Two
+    hidden fields: recipient, and subject</p>
+    <p>Please input your name: <input type="text" size="30"
+    name="name"><br>
+    and your email address: <input type="text" size="30"
+    name="addr"></p>
+    <p>This is a field called ARGV[0]: <input type="text"
+    size="30" name="ARGV[0]"><br>
+    This is a field called ARGV[1]: <input type="text" size="30"
+    name="ARGV[1]"></p>
+    <p><input type="submit"> <input type="reset"> </p>
+</form>
+
+<hr>
+
+<p>FORM METHOD=&quot;POST&quot; action=/cgi-bin/testcgi.exe</p>
+
+<form action="/cgi-bin/testcgi.exe" method="POST">
+    <input type="hidden" name="recipient" value="test@test.com"><input
+    type="hidden" name="subject" value="Form submission"><p>Two
+    hidden fields: recipient, and subject</p>
+    <p>Please input your name: <input type="text" size="30"
+    name="name"><br>
+    and your email address: <input type="text" size="30"
+    name="addr"></p>
+    <p>This is a field called foo: <input type="text" size="30"
+    name="foo"></p>
+    <p><input type="submit"> <input type="reset"> </p>
+</form>
+
+<hr>
+</body>
+</html>

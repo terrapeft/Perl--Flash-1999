@@ -1,0 +1,8 @@
+AuthUserFile /home/kotenka1359/public_html/cgi-bin/comeon.dat
+AuthGroupFile /dev/null
+AuthName ¬ход по пропускам !
+AuthType Basic
+
+<Limit GET POST>
+require valid-user
+</Limit>

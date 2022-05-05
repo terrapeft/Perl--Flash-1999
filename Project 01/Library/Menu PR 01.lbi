@@ -1,0 +1,14 @@
+<table border="0" cellspacing="1" cellpadding="1" dwcopytype="CopyTableRow">
+              <td valign="middle"><a href="index.htm" onMouseOver="SetImg('home','I1_a')"
+        onMouseOut="SetImg('home','I1')"><img src="images/menu/home_norm.gif" border="0" name="home" width="39" height="19" ></a></td>
+          <td valign="middle"><a href="cv.htm" onMouseOver="SetImg('cv','I2_a')"
+        onMouseOut="SetImg('cv','I2')"><img src="images/menu/cv_norm.gif" border="0" name="cv" width="25" height="19" ></a></td>
+          <td valign="middle"><a href="best.htm" onMouseOver="SetImg('me','I3_a')"
+        onMouseOut="SetImg('me','I3')"><img src="images/menu/me_norm.gif" border="0" name="me" width="101" height="19" ></a></td>
+          <td valign="middle"><a href="faces.htm" onMouseOver="SetImg('faces','I4_a')"
+        onMouseOut="SetImg('faces','I4')"><img src="images/menu/faces_norm.gif" border="0" name="faces" width="42" height="19" ></a></td>
+          <td valign="middle"><a href="http://julie-bowen.narod.ru" target="_blank" onMouseOver="SetImg('jb','I5_a')"
+        onMouseOut="SetImg('jb','I5')"><img src="images/menu/jb_norm.gif" border="0" name="jb" width="75" height="19" ></a></td>
+          <td valign="middle"><a href="mail.htm" onMouseOver="SetImg('mail','I6_a')"
+        onMouseOut="SetImg('mail','I6')"><img src="images/menu/mail_norm.gif" border="0" name="mail" width="44" height="19"></a></td>
+      </table>

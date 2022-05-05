@@ -1,0 +1,45 @@
+<script language="JavaScript">
+function stepsto(URL)
+{
+window.parent.frames[1].location=URL;
+}	
+
+</script>
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="buttons.css">
+<script TYPE="text/javascript" SRC="buttons.js"></script>
+<title>Menu</title>
+</head>
+
+<body bgcolor="#808080" topmargin="0" leftmargin="0">
+
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><table CLASS="complexBar" CELLPADDING="0" CELLSPACING="0" BORDER="1"
+    ALIGN="CENTER" width="100%">
+      <tr>
+        <td CLASS="complexButton" ONCLICK="stepsto('main.html')" width="16%" align="center"><img
+        SRC="images/home.gif" WIDTH="19" HEIGHT="20" ALIGN="MIDDLE">&nbsp;Инфо</td>
+        <td CLASS="complexButton" ONCLICK="stepsto('../cgi-bin/admin.cgi')" width="16%" align="center"><img
+        src="images/me.gif" width="20" height="20">Опции сайта&nbsp;</td>
+        <td CLASS="complexButton" ONCLICK="stepsto('http://gris-souris.virtualave.net/cgi-bin/vizadmin.cgi')" width="16%" align="center"><img
+        src="images/gallery.gif" width="20" height="20">Опции GB</td>
+        <td CLASS="complexButton" ONCLICK="stepsto('news.htm')" width="16%" align="center"><img
+        src="images/news.gif" width="20" height="20">&nbsp;Новости</td>
+        <td CLASS="complexButton" ONCLICK="stepsto('marks.htm')" valign="bottom"
+        align="center" width="16%"><img src="images/marks.gif" width="20" height="20">&nbsp;Инструкции</td>
+        <td class="complexButton" ONCLICK="stepsto('mailto:killerjohn@mail.ru	')" valign="bottom"
+        align="center" width="16%"><img src="images/mail.gif" width="21" height="20">&nbsp;Письмо
+          мне</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

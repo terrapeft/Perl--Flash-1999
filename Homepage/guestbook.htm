@@ -1,0 +1,202 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>GuestBook</title>
+</head>
+
+<body background="images/egypt13.jpg">
+<p align="center"><span style="position: absolute; left: 925; top: 27"><a href="down.htm"><img border="0" src="images/_1.gif" alt="Титульная страница" width="60" height="60"></a></span>
+<span style="position: absolute; left: 925; top: 88"><a href="tell.htm"><img border="0" src="images/_2.gif" alt="Я" width="60" height="60"></a></span>
+<span style="position: absolute; left: 925; top: 150"><a href="gimn.htm"><img border="0" src="images/_3.gif" alt="Фишка" width="60" height="60"></a></span>
+<span style="position: absolute; left: 925; top: 211"><a href="mine.htm"><img border="0" src="images/_5.gif" alt="Мое" width="60" height="60"></a></span>
+<span style="position: absolute; left: 925; top: 272"><a href="story/index.htm"><img border="0" src="images/_4.gif" alt="Истории" width="60" height="60"></a></span></p>
+
+<form name=puzogb method=get action=../gb.html onSubmit="PreSubmit();">
+<table width=500 border=0 CELLPADDING=0 CELLSPACING=0>
+<tr ALIGN=LEFT VALIGN=TOP><td><font size="-1" face="Verdana, Aryal">Вас зовут:</font>
+</td>
+<td ALIGN=LEFT VALIGN=TOP>
+<input type=text name=name size=40 class=border></td></tr>
+        <tr ALIGN=LEFT VALIGN=TOP><td><font size="-1" face="Verdana, Aryal">e-mail:</font>
+</td>
+<td ALIGN=LEFT VALIGN=TOP>
+<input type=text name=e_mail size=40 class=border></td></tr>
+        <tr ALIGN=LEFT VALIGN=TOP><td><font size="-1" face="Verdana, Aryal">URL (если есть):</font>
+</td>
+<td ALIGN=LEFT VALIGN=TOP>
+<input type=text name=url value="http://" size=40 class=border></td></tr>
+        <tr ALIGN=LEFT VALIGN=TOP><td><font size="-1" face="Verdana, Aryal">Cообщение:</font>
+</td>
+<td ALIGN=LEFT VALIGN=TOP>
+</td></tr>
+</table><textarea name=coment wrap cols=51 rows=4 class=border></textarea><br>
+
+        
+        <input type=hidden NAME=coder value="windows-1251">
+        <input type=hidden name=w value=1>
+        <input type=submit value='Сказать' style="{border: outset 1px; color: #000000; background: #DDDDDD; cursor: ne-resize;}">
+        </form><script LANGUAGE="JavaScript">
+    ua=navigator.userAgent;
+    v=navigator.appVersion.substring(0,1);
+    ch=document.charset;
+    if ((ua.lastIndexOf("MSIE")!=-1) && (v!='1') && (v!='2') && (v!='3')) {
+      if ((ch!="windows-1251") && (ch!="koi8-r") && (ch!="cp866") && (ch!="iso-8859-5"))
+    document.puzogb.coder.value="windows-1251";
+      else
+    document.puzogb.coder.value=document.charset;
+        }
+    else {
+    if (ua.indexOf("Win") != -1)
+       document.puzogb.coder.value="windows-1251";
+    else if (ua.indexOf("DOS") != -1 || ua.indexOf("OS/2") != -1)
+       document.puzogb.coder.value="cp866";
+    else if (ua.indexOf("Mac") != -1)
+        document.puzogb.coder.value="koi8-r";
+        else
+        document.puzogb.coder.value="windows-1251";
+        }
+</script>
+
+<script language="JavaScript">
+    // sysadmin, set the host to the current PLEASE
+    var sHost = "right-now.virtualave.net";
+    function getCookieVal (offset)
+    {
+        var endstr = document.cookie.indexOf (";", offset);
+        if (endstr == -1)
+            endstr = document.cookie.length;
+        return unescape(document.cookie.substring(offset, endstr));
+    }
+    function GetCookie (name)
+    {
+        var arg = name + "=";
+        var alen = arg.length;
+        var clen = document.cookie.length;
+        var i = 0;
+        while (i < clen)
+        {
+            var j = i + alen;
+            if (document.cookie.substring(i, j) == arg)
+                return getCookieVal (j);
+            i = document.cookie.indexOf(" ", i) + 1;
+            if (i == 0) break;
+        }
+        return null;
+    }
+    function SetCookie (name, value, expires, path, domain, secure)
+    {
+        document.cookie = name + "=" + escape (value) +
+            ((expires) ? "; expires=" + expires.toGMTString() : "") +
+            ((path) ? "; path=" + path : "") +
+            ((domain) ? "; domain=" + domain : "") +
+            ((secure) ? "; secure" : "");
+    }
+    function DeleteCookie (name,path,domain)
+    {
+        if (GetCookie(name))
+        {
+            document.cookie = name + "=" +
+                ((path) ? "; path=" + path : "") +
+                ((domain) ? "; domain=" + domain : "") +
+                "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+        }
+    }
+    function PreSubmit()
+    {
+        var expdate = new Date ();
+        expdate.setTime (expdate.getTime() + (360 * 24 * 60 * 60 * 1000)); // 360 day from now
+        SetCookie ("puzogb_name", document.puzogb.name.value, expdate, null, sHost);
+        SetCookie ("puzogb_e_mail", document.puzogb.e_mail.value, expdate, null, sHost);
+        SetCookie ("puzogb_url", document.puzogb.url.value, expdate, null, sHost);
+    }
+    function PreLoad()
+    {
+        var sTemp = GetCookie ("puzogb_name");
+        if (sTemp != null) document.puzogb.name.value = sTemp;
+        sTemp = GetCookie ("puzogb_e_mail");
+        if (sTemp != null) document.puzogb.e_mail.value = sTemp;
+        sTemp = GetCookie ("puzogb_url");
+        if (sTemp != null) document.puzogb.url.value = sTemp;
+    }
+    PreLoad();
+</script>
+
+<a name="messages">
+<table bgcolor=#eeeeee width=500 border=0 CELLPADDING=0 CELLSPACING=0><tr><td></td></tr></table><br>Говорю 
+<font size="-1" face="Verdana, Aryal">Гунила
+  <small><font color="#993300">  Пт, 14.04.2000 - 10:59</font></small>
+<br>
+<font color=#000000> Я тут с людьми поговорила... будь по твоему. <br> Ты мертвого достанешь! Легче согласится. <br> Черт возьми! Ну да ладно. Приветик тебе. <br> Но я еще возьму реванш !!</font></font>
+<br><hr noshade size=1>Говорю 
+<font size="-1" face="Verdana, Aryal"></a><a href="mailto:Неплохойсайт">Игорь Лучко</a>
+  <small><font color="#993300">  Пн, 10.04.2000 - 2:51</font></small>
+<br>
+<font color=#000000> Виталя делай Толпежкина <br> ОБЯЗАТЕЛЬНО!!!!! <br> <br> P.s. Гдё тетки? <br></font></font>
+<br><hr noshade size=1>Говорю 
+<font size="-1" face="Verdana, Aryal">Grisya
+  <small><font color="#993300">  Пн, 13.03.2000 - 10:15</font></small>
+<br>
+<font color=#000000> Господи, ну и окружение у тя: Вованы, Петры, Тукеры...жуть какая-то........../я этого не говорила на самом деле, так что не надо на меня тут/</font></font>
+<br><hr noshade size=1>Говорю 
+<font size="-1" face="Verdana, Aryal">Grisya
+  <small><font color="#993300">  Пн, 13.03.2000 - 10:13</font></small>
+<br>
+<font color=#000000> А почему это она /книга/ сразу мое имья пишет?! А может я анонимом хочу быть?! Ну тогда ладно, привет, Виталя:)</font></font>
+<br><hr noshade size=1>Говорю 
+<font size="-1" face="Verdana, Aryal"><a href="mailto:dr_bormental@mail.ru">Вован</a>
+  <small><font color="#993300">  Пн, 21.02.2000 - 10:17</font></small>
+<br>
+<font color=#000000> Ну, братан, ты и замочил тему. Все по кайфу... Рули дальше в том же духе...</font></font>
+<br><hr noshade size=1>Говорю 
+<font size="-1" face="Verdana, Aryal"><a href="mailto:tucker@mail.ru">Tucker</a>
+  <small><font color="#993300">  Вс, 20.02.2000 - 22:48</font></small>
+<br>
+<font color=#000000> Все хорошо, только я одно не могу понять: как отсюда попасть в главное меню? Может вся фишка в IE? И NS не поддается? Спасибо.</font></font>
+<br><hr noshade size=1>Говорю 
+<font size="-1" face="Verdana, Aryal"><a href="mailto:tucker@mail.ru">Tucker</a>
+  <small><font color="#993300">  Вс, 20.02.2000 - 22:39</font></small>
+<br>
+<font color=#000000>Говорил тебе: вставь сцену загробного суда!</font></font>
+<br><hr noshade size=1>Говорю 
+<font size="-1" face="Verdana, Aryal">Den
+  <small><font color="#993300">  Пт, 18.02.2000 - 2:0</font></small>
+<br>
+<font color=#000000>Я тоже был</font></font>
+<br><hr noshade size=1>Говорю 
+<font size="-1" face="Verdana, Aryal">Петро
+  <small><font color="#993300">  Ср, 16.02.2000 - 7:55</font></small>
+<br>
+<font color=#000000> А гыде ж фотки ? Ты вроде гаварил что можно <br> в гестах фотки будет вешать. Или я не въехал в <br> тему. <br> Круто без базара</font></font>
+<br><hr noshade size=1>Говорю 
+<font size="-1" face="Verdana, Aryal">Grisya
+  <small><font color="#993300">  Вт, 15.02.2000 - 10:25</font></small>
+<br>
+<font color=#000000> пожалуйста, убери ссылку на меня.........в таком виде она меня абсолютно не устраивает..........думаю, что имею право об этом просить........</font></font>
+<br><hr noshade size=1>Говорю 
+<font size="-1" face="Verdana, Aryal">Grisya
+  <small><font color="#993300">  Пн, 7.02.2000 - 7:56</font></small>
+<br>
+<font color=#000000> Это тебе лично и, разумеется, я не обижусь, если сие будет удалено по прочтении. Самое первое впечатление ты уже знаешь, а второе вот: очень красиво, но музыка убивает /вся/.</font></font>
+<br><hr noshade size=1>Говорю 
+<font size="-1" face="Verdana, Aryal"><a href="mailto:@">Mortal</a>
+  <small><font color="#993300">  Сб, 5.02.2000 - 7:12</font></small>
+<br>
+<font color=#000000>Ага !</font></font>
+<br><hr noshade size=1><table bgcolor=#eeeeee width=500 border=0 CELLPADDING=0 CELLSPACING=0><tr><td></td></tr></table><br>
+
+
+
+</body>
+
+</html>
+
+<!-- VA Banner -->
+</XMP>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if(typeof(top)=="object" && typeof(top.va_frame)=="object") { if (typeof(top.va_frame.document)=="object" && typeof(top.va_frame.document.images)=="object" && typeof(top.va_frame.document.images[0])=="object" && typeof(top.va_frame.document.images[0].src)=="string" && typeof(top.va_frame.document.images[0].src.length) =="number" && ( (top.va_frame.document.images[0].src.length>25 && top.va_frame.document.images[0].src.substring(0,25)=="http://images.go2net.com/") || (typeof(top.va_frame.document.images[1])=="object" && typeof(top.va_frame.document.images[1].src)=="string" && typeof(top.va_frame.document.images[1].src.length) =="number" && top.va_frame.document.images[1].src.length>25 && top.va_frame.document.images[1].src.substring(0,25)=="http://images.go2net.com/") ) ) {top.va_frame.location.reload(true); } else {dly=(1.+Math.random())*10000.; setTimeout('if (typeof(top.va_frame.document)=="object" && typeof(top.va_frame.document.images)=="object" && typeof(top.va_frame.document.images[0])=="object" && typeof(top.va_frame.document.images[0].src)=="string" && typeof(top.va_frame.document.images[0].src.length) =="number" && ( (top.va_frame.document.images[0].src.length>25 && top.va_frame.document.images[0].src.substring(0,25)=="http://images.go2net.com/") || (typeof(top.va_frame.document.images[1])=="object" && typeof(top.va_frame.document.images[1].src)=="string" && typeof(top.va_frame.document.images[1].src.length) =="number" && top.va_frame.document.images[1].src.length>25 && top.va_frame.document.images[1].src.substring(0,25)=="http://images.go2net.com/") ) ) {top.va_frame.location.reload(true);} else {window.open("http://click.go2net.com/adpopup?site=va&area=COMPUTERS&shape=banner","va_rzjr137y", "width=520,height=160"); }', dly); } } else { window.open("http://click.go2net.com/adpopup?site=va&area=COMPUTERS&shape=banner","va_rzjr137y", "width=520,height=160");}
+//-->
+</SCRIPT>

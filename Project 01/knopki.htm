@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body background="images/border_1_1.jpg">
+<script language="JavaScript">
+if( parseInt( navigator.appVersion ) >= 3 ) { compat = true; }
+if(compat)
+  {
+  I1 = new Image;I1.src="images/menu/home_norm.gif";
+  I2 = new Image;I2.src="images/menu/cv_norm.gif";
+  I3 = new Image;I3.src="images/menu/me_norm.gif";
+  I4 = new Image;I4.src="images/menu/faces_norm.gif"; 
+  I5 = new Image;I5.src="images/menu/jb_norm.gif";
+  I6 = new Image;I6.src="images/menu/mail_norm.gif";
+
+  I1_a = new Image;I1_a.src="images/menu/home_dark.gif";
+  I2_a = new Image;I2_a.src="images/menu/cv_dark.gif";
+  I3_a = new Image;I3_a.src="images/menu/me_dark.gif";
+  I4_a = new Image;I4_a.src="images/menu/faces_dark.gif"; 
+  I5_a = new Image;I5_a.src="images/menu/jb_dark.gif";
+  I6_a = new Image;I6_a.src="images/menu/mail_dark.gif";
+  }
+  
+  
+  
+  
+function SetImg(Name,Img)
+  {
+  if(compat)
+    {
+    document.images[Name].src=eval(Img+'.src');
+    }
+  }
+</script>
+<br>
+
+<table border="0" background="images/yellow.gif" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%">
+
+      <table border="0" cellspacing="1" cellpadding="0">
+          <td valign="middle"><a href="home.htm" onmouseover="SetImg('home','I1_a')"
+        onmouseout="SetImg('home','I1')"><img src="images/menu/home_norm.gif" border="0" name="home" width="39" height="19" ></a></td>
+          <td valign="middle"><a href="cv.htm" onmouseover="SetImg('cv','I2_a')"
+        onmouseout="SetImg('cv','I2')"><img src="images/menu/cv_norm.gif" border="0" name="cv" width="25" height="19" ></a></td>
+          <td valign="middle"><a href="best.htm" onmouseover="SetImg('me','I3_a')"
+        onmouseout="SetImg('me','I3')"><img src="images/menu/me_norm.gif" border="0" name="me" width="101" height="19" ></a></td>
+          <td valign="middle"><a href="faces.htm" onmouseover="SetImg('faces','I4_a')"
+        onmouseout="SetImg('faces','I4')"><img src="images/menu/faces_norm.gif" border="0" name="faces" width="42" height="19" ></a></td>
+          <td valign="middle"><a href="http://julie-bowen.narod.ru" target="_blank" onmouseover="SetImg('jb','I5_a')"
+        onmouseout="SetImg('jb','I5')"><img src="images/menu/jb_norm.gif" border="0" name="jb" width="75" height="19" ></a></td>
+          <td valign="middle"><a href="mail.htm" onmouseover="SetImg('mail','I6_a')"
+        onmouseout="SetImg('mail','I6')"><img src="images/menu/mail_norm.gif" border="0" name="mail" width="44" height="19"></a></td>
+      </table>
+</td>  </tr>
+</table>
+
+
+</body>
+
+</html>

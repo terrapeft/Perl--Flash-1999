@@ -1,0 +1,33 @@
+a:link {color: #FF6600; text-decoration:underline}
+a:visited {color: #CC9900; text-decoration:none} 
+a:active {text-decoration:underline}
+a:hover {text-decoration:underline}
+
+H1 {
+        font-family: Arial;
+        font-weight: bold;
+        font-size : 16 pt;
+        color: #000000;
+}
+
+H2 {
+        font-family: Arial;
+        font-weight: bold;
+        font-size : 12 pt;
+        color: #000000;
+}
+
+H3 {
+        font-family: Arial;
+        font-weight: bold;
+        font-size : 10 pt;
+        color: #000000;
+}
+
+
+
+P  {
+	font: Arial;
+        font-size : 12 pt;
+	color: black;
+}

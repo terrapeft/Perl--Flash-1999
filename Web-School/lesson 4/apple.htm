@@ -1,0 +1,201 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="ru">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>apple</title>
+</head>
+
+<body BGCOLOR="#FFFFFF" ONLOAD="preloadImages();">
+
+<p>Вы когда-нибудь делали графическое меню,
+которое в зависимости от манипуляций мышью
+выглядело по-разному ?<br>
+Тогда вы знаете сколько неудобств связано с
+созданием для каждой кнопки отдельных
+файлов для каждого состояния:<br>
+мышь над кнопкой, щелчок, мышь за пределами
+кнопки, и др. Знаете какая бывает путаница,
+особенно если вы &quot;адаптируете&quot; скрипт
+вручную для своей страницы.<br>
+Photoshop позволяет создавать и сохранять
+кнопки и варинты для различных ее состояний
+в одном файле. Ничего нового. Те же слои. Но
+для каждого состояния можно сделать
+невидимым &quot;лишний&quot; слой, и при
+сохранении Photoshop автоматически выполнит
+сведение видимых слоев в каждом случае и
+сохранит все варианты в отдельные файлы и
+сгенерирует html-код, и вам почти ничего не
+придется делать.</p>
+<p>Для работы нам понадобятся Photoshop и ImageReady.
+При написании статьи использовались
+последнии версии обеих программ.<br>
+Пример:
+</p>
+<p>Я решил определить четыре различных
+состояния для будущей кнопки. 1. <b>Normal</b> -
+нормальное -&nbsp; то, что будет видно сразу
+после загрузки страницы, 2. <b>Over</b> - мышь над
+кнопкой, 3. <b>Down</b> - нажата левая или правая кнопка мыши (и
+не отпущена) 4. <b>Out</b> - в таком виде кнопка
+будет после того, как курсор мыши выйдет за
+ее&nbsp; границы, т.е. к состоянию Normal кнопка
+уже не вернется до следующей перезагрузки
+страницы.
+</p>
+<p>Будьте внимательны, т.к. различные
+браузеры, и различные их версии не
+одинаково обрабатывают разные события.
+Поэтому протестируйте результат в разных
+версиях.
+</p>
+<p>Вот как все&nbsp; воплощалось технически.
+</p>
+<p align="right"><i>Photoshop</i>
+</p>
+<p>
+Во вновь созданном файле размером 200 Х 200
+пикслей я
+</p>
+<p align="left"><img border="0" src="images/00v_0001.gif" align="left" width="52" height="52">  
+1.
+Создал новый слой (Ctrl+Shift+N) с названием <b>apple
+normal<br>
+&nbsp;&nbsp;&nbsp;&nbsp; </b>и нарисовал на нем нечто
+похожее на яблоко.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+<b><img border="0" src="images/00v_0002.gif" align="left" width="51" height="53"> </b>2. Затем
+сделал дубль слоя (Layer/Duplicate layer...
+Клавиатурного сокращения нету)<br>
+&nbsp;&nbsp;&nbsp;&nbsp; обозвав его <b>apple over, </b>и
+попытался изобразить надкус.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<img border="0" src="images/00v_0003.gif" align="left" width="40" height="56">3. По логике следующее состояние укушенного
+яблока - это огрызок. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Технически он
+делался не простым урезанием предыдущего
+слоя, но в данном случае<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; это не
+принципиально. Слой с огрызком носит имя <b>apple
+down</b>.&nbsp;<br>
+<br>
+<img border="0" src="images/00v_0004.gif" align="left" width="40" height="56">&nbsp;4.
+Ну и сюрприз, который ожидает многих
+ценителей яблок - большой червяк.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Имя слоя <b>apple
+out</b>. </p>
+<p>&nbsp;</p>
+<p>Название слоев не имеют значения, они
+даются только, чтобы самому не запутаться.<br>
+Я добавил еще два слоя - с текстом и серыми
+полосами.<br>
+5. Теперь
+инструментом <b>Slice Tool</b> (<a href="slice.htm">см.</a>) вырезаю яблоко. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Эта область и будет
+кнопкой, а остальные части - статичные .<br>
+<img border="0" src="images/00v_0005.gif" align="left" width="202" height="202"><br>
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Отправляю результат в <b> ImageReady</b> нажатием
+кнопки на панели инструментов</p>
+<p><img border="0" src="images/00v_0006.gif" width="64" height="52">
+</p>
+<p align="right"><i>ImageReady</i>
+</p>
+<p>Внизу на палитре открываю закладку <b> Rollover</b> и
+нажимая на кнопочку &quot;create new rollover state&quot;<br>
+создаю четыре состояния. <br>
+<img border="0" src="images/00v_0007.gif" width="269" height="134"><br>
+<br>
+Теперь поочередно нажимая мышью на
+пиктограмму каждого состояния, я на
+закладке <b>Layers</b> делаю<br>
+невидимыми лишние слои из числа тех четырех,
+которые изображают нашу кнопку в разных
+видах. Т.е. для&nbsp; <b>Normal</b>, <br>
+видимым я оставил <b> apple normal</b>, для <b> Over</b> - <b> apple
+over</b>, и
+так далее. На закладке <b>rollover</b>, на
+пиктограммках отображаются изменения.<br>
+Например, для состония <b>Down</b> закладка <b>Layers</b>
+(в ImageReady) выглядит так<br>
+<img border="0" src="images/00v_0009.gif" width="242" height="380"></p>
+<p>Для предварительного просмотра в
+браузере на панели инструментов есть
+кнопка<br>
+<img border="0" src="images/00v_0008.gif" width="236" height="52"><br>
+<br>
+Если вас все устраивает, то осталось только
+оптимизировать размер изображения и
+сохранить результат.</p>
+<p>А вот то что получилось у меня: (Тестировалось
+в MSIE 5.5 и NC 4.7- работает одинаково)</p>
+<!-- ImageReady Preload Script (apple.psd) -->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+
+function changeImages() {
+	if (document.images && (preloadFlag == true)) {
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+		}
+	}
+}
+
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+		apple_03_over = newImage("images/apple_03-over.gif");
+		apple_03_down = newImage("images/apple_03-down.gif");
+		apple_03_out = newImage("images/apple_03-out.gif");
+		preloadFlag = true;
+	}
+}
+
+// -->
+</SCRIPT>
+<!-- End Preload Script -->
+<!-- ImageReady Slices (apple.psd) -->
+<TABLE WIDTH=200 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD COLSPAN=3>
+			<IMG SRC="images/apple_01.gif" width=200 height=33></TD>
+	</TR>
+	<TR>
+		<TD ROWSPAN=2>
+			<IMG SRC="images/apple_02.gif" width=47 height=167></TD>
+		<TD>
+			<A HREF="#"
+				ONMOUSEOVER="changeImages('apple_03', 'images/apple_03-over.gif'); return true;"
+				ONMOUSEOUT="changeImages('apple_03', 'images/apple_03-out.gif'); return true;"
+				ONMOUSEDOWN="changeImages('apple_03', 'images/apple_03-down.gif'); return true;"
+				ONMOUSEUP="changeImages('apple_03', 'images/apple_03-over.gif'); return true;">
+				<IMG NAME="apple_03" SRC="images/apple_03.gif" width=104 height=116 BORDER=0></A></TD>
+		<TD ROWSPAN=2>
+			<IMG SRC="images/apple_04.gif" width=49 height=167></TD>
+	</TR>
+	<TR>
+		<TD>
+			<IMG SRC="images/apple_05.gif" width=104 height=51></TD>
+	</TR>
+</TABLE>
+<!-- End ImageReady Slices -->
+
+</body>
+
+</html>

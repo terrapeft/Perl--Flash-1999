@@ -1,0 +1,9 @@
+vti_encoding:SR|utf8-nl
+vti_timelastmodified:TR|15 Sep 2000 11:43:28 -0000
+vti_extenderversion:SR|4.0.2.2717
+vti_nexttolasttimemodified:TR|15 Sep 2000 11:43:28 -0000
+vti_author:SR|Vitaly
+vti_nosourcecontrol:SR|True
+vti_modifiedby:SR|Vitaly
+vti_timecreated:TR|15 Sep 2000 11:43:26 -0000
+vti_backlinkinfo:VX|

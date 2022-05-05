@@ -1,0 +1,22 @@
+.complexButton {
+    background: buttonface;
+	padding: 1px;
+	border: 1px solid buttonface;
+	font: menu;
+	cursor: default;
+	margin: 2px;
+}
+.complexButton IMG	{
+    filter: gray();
+	vertical-align: top;
+}
+
+.complexBar {
+    background: buttonface;
+	border-top: 1px solid buttonhighlight;
+	border-left: 1px solid buttonhighlight;
+	border-bottom: 1px solid buttonshadow;
+	border-right: 1px solid buttonshadow;
+	padding: 2px;
+	font: menu;
+}

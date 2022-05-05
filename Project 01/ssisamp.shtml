@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>SSI test page</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<h2 align="center">SSI Test Page</h2>
+
+<hr>
+<p>This is ssisamp.shtml</p>
+<p>Below is &lt;!--#exec cmd=&quot;cgi-bin/ssicgi.pl&quot;--&gt;</p>
+
+<hr>
+<pre>
+<!--#exec cmd="cgi-bin/ssicgi.pl"-->
+</pre>
+
+<hr>
+<p>Below is &lt;!--#exec cgi=&quot;/cgi-bin/ssicgi.pl&quot;--&gt;</p>
+<hr>
+<!--#exec cgi="/cgi-bin/ssicgi.pl"-->
+
+<hr>
+<p>Below is &lt;!--#include file=&quot;/cgi-bin/ssicgi.pl&quot;--&gt;</p>
+<hr>
+<pre>
+<!--#include file="/cgi-bin/ssicgi.pl"-->
+</pre>
+
+<hr>
+<p>Below is Flastmod Virtual</p>
+<hr>
+<pre>
+<!--#flastmod virtual="index.html" -->
+</pre>
+
+
+<hr>
+<p>Back to ssisamp.shtml</p>
+</body>
+</html>

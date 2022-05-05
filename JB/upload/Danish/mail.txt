@@ -1,0 +1,5 @@
+<HR>
+{DATE}
+<a href="mailto:{AUTHOREMAIL}">{AUTHORNAME}</a>&nbsp;&nbsp;&nbsp;<a href={URL}>{URL}</A><BR>
+<I>{MESSAGE}</I><BR>
+<B>{OWNERREPLY}</B>

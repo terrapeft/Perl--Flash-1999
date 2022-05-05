@@ -1,0 +1,156 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="Content-Language" content="ru">
+<script language="javascript">
+
+var counter=Math.round(Math.random()*25);
+var timer=0;
+var facts=new Array(
+"Упс - а !!");
+
+function sfacti() {
+    rfact.style.filter = "revealTrans(Duration=3, Transition=12)";
+    rfact.filters.revealTrans.Apply();
+    var rn = "<b>В гостях у Мышки Гри</b><br>";
+    rfact.innerHTML = rn;
+    rfact.filters.revealTrans.Play();
+    setTimeout("sfact()",5000);
+}
+
+function sfact() {
+    var rn=timer;
+    if (timer!=facts.length) {
+    timer++ 
+    rfact.style.filter = "revealTrans(Duration=2, Transition=counter)";
+    rfact.filters.revealTrans.Apply();
+    counter++;
+    var pausa = facts[rn].length / 10 * 1600;
+    if (pausa < 4000) {pausa = 4000}
+    rfact.innerHTML = facts[rn];
+    rfact.filters.revealTrans.Play();
+    setTimeout("sfact()",pausa);} else
+    {
+    rfact.style.filter = "revealTrans(Duration=3, Transition=12)";
+    rfact.filters.revealTrans.Apply();
+    var rn = "<b>А у вас вся спина белая...</b><br>";
+    rfact.innerHTML = rn;
+    rfact.filters.revealTrans.Play();
+    }
+}
+
+
+</script>
+
+<bgsound src="../midi/swdreams.mid" loop="0">
+
+<style TYPE="text/css"> 
+img.gray { filter: FlipV, FlipH} 
+img.color {   } 
+</style>
+
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta name="description" content="В гостях у Gris Souris">
+<meta name="keywords" content="Gris Souris gris souris Homepage homepage smth. interesting friends, Gris, Souris, gris, souris, mouse, mice, gray, Galina, Gallina">
+<meta name="Holder" content="Gris Souris">
+
+
+<title>В гостях у Gris Souris</title>
+</head>
+
+<body bgcolor="#000000" onload="sfacti()" text="#FFFFFF" link="#FDEACB" vlink="#FDEACB" alink="#FF0000">
+<div ID="rfact"
+style="position: absolute; top: 60; height: 20; width: 100%; text-align: center; font-style: italic; font-family: Times New Roman; font-size: 22; color: #CAA386; left: 12"></div>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="43%" nowrap>&nbsp;
+      <p>&nbsp;</p>
+      <table border="0" width="100%" cellpadding="0" cellspacing="5">
+      <tr>
+        <td width="50%" nowrap></td>
+        <td width="50%" align="center" nowrap><a href="fairy_tale.htm"><img border="0" src="../images/01tl.gif" class="gray" 
+        onMouseOver="this.className='color'; window.status='Первоапрельская сказка'; return true" 
+        onMouseOut="this.className='gray'; window.status=''; return true" width="92" height="23"
+        ></a></td>
+      </tr>
+      <tr>
+        <td width="50%" nowrap></td>
+        <td width="50%" align="center" nowrap><a href="../main/index.htm"><img border="0" src="../images/01me.gif" class="gray" 
+        onMouseOver="this.className='color'; window.status='Рассказ о том, как жила-была одна девочка ...'; return true" 
+        onMouseOut="this.className='gray'; window.status=''; return true" width="92" height="23"
+        ></a></td>
+      </tr>
+      <tr>
+        <td width="50%" nowrap></td>
+        <td width="50%" align="center" nowrap><a href="../friends/index.htm"><img border="0" src="../images/01fr.gif" class="gray" 
+        onMouseOver="this.className='color'; window.status='И были у нее друзья. Не простые, а с домашними страницами...'; return true" 
+        onMouseOut="this.className='gray'; window.status=''; return true" width="129" height="23"></a>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="50%" valign="bottom" nowrap></td>
+        <td width="50%" valign="bottom" align="center" nowrap><a href="../gallery/index.htm"><img border="0" src="../images/01gl.gif" class="gray" 
+        onMouseOver="this.className='color'; window.status='И насканировала она своих фотографий, и нарисовала рисунков...'; return true" 
+        onMouseOut="this.className='gray'; window.status=''; return true" width="128" height="23"></a></td>
+      </tr>
+      <tr>
+        <td width="50%" valign="bottom" nowrap></td>
+        <td width="50%" valign="bottom" align="center" nowrap><a href="../links/index.htm"><img border="0" src="../images/01ln.gif" class="gray" 
+        onMouseOver="this.className='color'; window.status='И присылали ей посетители адреса своих любимых мест в инете...'; return true" 
+        onMouseOut="this.className='gray'; window.status=''; return true" width="105" height="23"></a></td>
+      </tr>
+      <tr>
+        <td width="50%" valign="bottom" nowrap></td>
+        <td width="50%" valign="bottom" align="center" nowrap><a href="http://gris-souris.virtualave.net/vizbook/vizbook.htm"><img border="0" src="../images/01gb.gif" class="gray"
+        onMouseOver="this.className='color'; window.status='И оставляли они весточку о себе...'; return true" 
+        onMouseOut="this.className='gray'; window.status=''; return true" width="115" height="23"></a></td>
+      </tr>
+      <tr>
+        <td width="50%" valign="bottom" nowrap></td>
+        <td width="50%" valign="bottom" align="center" nowrap><a href="../utility/index.htm"><img border="0" src="../images/01ut.gif" class="gray" 
+        onMouseOver="this.className='color'; window.status='И скачивали самое интересное...'; return true" 
+        onMouseOut="this.className='gray'; window.status=''; return true" width="147" height="23"></a></td>
+      </tr>
+    </table>
+      <p><br>
+      &nbsp;&nbsp; 
+      <table border="0" width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="50%">
+            <p align="right"></td>
+          <td width="50%"><a href="mailto:gris@mail.ru"><img border="0" src="../images/apanim.gif" align="right" width="76" height="84"></a></td>
+        </tr>
+      </table>
+    </td>
+    <td width="57%" nowrap><img border="0" src="../images/mice.jpg" width="338" height="416"></td>
+  </tr>
+</table>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%" nowrap>
+      <p align="center"></td>
+  </tr>
+</table>
+<p align="center">
+<!--#include virtual="../cgi-bin/acounter.cgi?out=c2ezcount.dat&inv=0"-->
+</p>
+<p align="center"><font color="#CAA386"><font face="Arial Black" size="1">
+Обновлено <!--#include virtual="../cgi-bin/news.cgi?ln=2"-->
+
+</font><b><font face="Arial" size="1"><br>
+</font></b><font face="Arial Black"><font size="1">&nbsp;Right Now! Design
+Studio (C) 2000. Все права защищены мною.</font><font face="Arial" size="4" ><br>
+</font><a style="text-decoration: none" href="mailto:killerjohn@mail.ru"><font size="1">#Данила мастер#</font>
+</a></font>
+</font>
+</p>
+</body>
+</html>
+
+

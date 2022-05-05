@@ -1,0 +1,1 @@
+print $i=int(rand(10));
